@@ -1,0 +1,335 @@
+*{
+    border:0;
+    margin:0;
+    padding: 0;
+}
+
+body {
+
+}
+
+/* header css start here */
+
+header {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 8rem 11rem;
+    background-image: url(https://7-dany.github.io/Frontend-mentor/Loopstudios-Landing-Page-Main/images/desktop/image-hero.jpg);
+    background-size: 100% 100%;
+    gap: 10em;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+}
+.header-logo {
+    /* animation: slidefromleft 1s ease-in-out; */
+}
+
+.nav-info {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+}
+.nav1 {
+    display: flex;
+    align-items: center;
+
+    /* animation: slidefromright 0.8s ease-in-out; */
+}
+.btn {
+    cursor: pointer;
+    background-color: rgba(240, 248, 255, 0);
+    color: white;
+    font-size: 1em;
+    border: none;
+    position: relative;
+    padding-bottom: 5px;
+}
+.btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.150rem;
+    background: white;
+    bottom: 0;
+    left: 0;
+}
+.btn-center::after {
+    transform: scale(0,1);
+    transition: transform 0.3s ease-in-out;
+
+}
+.btn-center:hover::after {
+    transform: scale(1,1);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+}
+.header-main {
+    border: 2px solid white;
+    width: 500px;
+    padding: 1em 2em;
+
+    /* animation: slidefromleft 1s ease-in-out; */
+}
+.header-h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 3.4em;
+    letter-spacing: 3px;
+    line-height: 1.3;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+}
+
+/* @keyframes slidefromleft {
+    from {transform: translateX(-60%);}
+
+    to {transform: translateX(0);}
+}
+@keyframes slidefromright {
+    from {transform: translateX(60%);}
+    
+
+    to {transform: translateX(0);}
+} */
+
+
+div {
+    transition: 1s;
+    opacity: 0;
+    transform: translateX(-60%);
+    filter: blur(1px);
+}
+.show {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+}
+
+
+/* from here the main css start */
+
+main {
+    padding: 8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8em;
+    overflow-x: hidden;
+}
+section {
+    display: flex;
+    align-items: end;
+}
+.section1-image {
+    /* animation: slidefromleft 1s ease-in-out; */
+}
+.section1-info {
+    margin-left: -8em;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+    padding: 4em 4em 0em ;
+
+    /* animation: slidefromright 0.8s ease-in-out; */
+}
+.h2-section1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 3em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+}
+.p-section1 {
+    color: #5f5f5f;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+/* first section of main ended and now 2nd section will start */
+
+.section2 {
+    width: 100%;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
+    /* grid-area: 
+    "header empty empty header2"
+    "main main main main"
+    "main main main main"; */
+}
+.h2-grid {
+    grid-row: 1/2;
+    grid-column: 1/-2;
+}
+.h2-grid-info {
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 2em;
+
+}
+.grid-box {
+    
+}
+.a-grid {
+    grid-row: 1/-0;
+    grid-column: 5/4; 
+    justify-self: flex-end;
+    border: 1px solid black;
+    text-transform: uppercase;
+    font-size: 1em;
+    text-decoration: none;
+    padding: 0.4em 2em;
+    font-weight: 400;
+    color: black;
+    cursor: pointer;
+    background-color: white; 
+    transition-duration: 0.8s;
+}
+.a-grid:hover {
+    background-color: black;
+    color: white;
+}
+.img-grid {
+    width: 100%;
+}
+.p-grid {
+    font-size: 2em;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    position: absolute;
+    bottom: 1.2em;
+    left: 1.2em;
+    text-align: left;
+    max-width: 150px;
+
+}
+
+/* here is the end of main and beginning of footer */
+
+footer {
+    background-color: black;
+    color: white;
+    /* height: 30vh; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    padding: 4em 8em;
+    gap: 2em;
+}
+.footer-info {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+.p-footer {
+    color: gray;
+}
+.copyright {
+    margin-left: 2em;
+    justify-self: flex-end;
+}
+.socialmedia {
+    justify-self: flex-end;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+img {
+    cursor: pointer;
+}
+/* the end*/
+
+@media only screen and (max-width:550px) {
+    * {
+        margin-right: -9px;
+    }
+
+    /* header start here */
+    header {
+        padding: 3rem 2rem 4rem;
+        gap: 3rem;
+    }
+    .header-nav {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: 1.5em;
+    }
+    .header-main {
+        width: 342px;
+    }
+    .header-h1 {
+        font-size: 2.4em;
+        letter-spacing: 2px;
+        line-height: 1.3;
+    }
+
+    /* main start here */
+    main {
+        padding: 2em;
+        gap: 5em;
+    }
+    .section1 {
+        flex-direction: column;
+    }
+    .img-vr {
+        width: 97%;
+    }
+    .section1-info {
+        padding: 2em 0em 0em;
+        width: 100%;
+    }
+
+    .grid-box {
+        grid-column: 1/5;
+    }
+    .a-grid {
+        padding: 0.4em 0.5em;
+        margin-right: 10px;
+        
+    }
+    .img-grid {
+        width: 97%;
+        height: 720px;
+    }
+
+    /* footer start here */
+    footer {
+        padding: 3em 4em;
+        gap: 2em;
+    }
+    .footer-logo {
+        grid-column: 1/2;
+    }
+    .socialmedia {
+        grid-column: 1/2;
+        display: flex;
+        gap: 3rem;
+        justify-self: flex-start;
+    }
+    .footer-info {
+        grid-column: 1/2;
+    }
+    .copyright {
+        grid-column: 1/2;
+        justify-self: flex-start;
+        margin-left: 0px;
+    }
+}
